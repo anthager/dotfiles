@@ -1,63 +1,32 @@
-" Don't try to be vi compatible
-
 set nocompatible
 
-filetype off
-
 syntax on
-
-filetype plugin indent on
-set modelines=0
 set number
-set ruler
-set visualbell
-set encoding=utf-8
-set wrap
-set textwidth=79
-set formatoptions=tcqrn1
-set tabstop=4
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set noshiftround
+set tabstop=2
+set mouse=a
+
+:set laststatus=2
+:set showmode
+
+set history=1000         " remember more commands and search history
+set undolevels=1000      " use many muchos levels of undo
+set title                " change the terminal's title
+set visualbell           " don't beep
+set noerrorbells         " don't beep
 set backspace=indent,eol,start
-set matchpairs+=<:> " use % to jump between pairs
-runtime! macros/matchit.vim
-nnoremap j gj
-nnoremap k gk
+                    " allow backspacing over everything in insert mode
+set autoindent    " always set autoindenting on
+set copyindent    " copy the previous indentation on autoindenting
+set number        " always show line numbers
+set shiftwidth=2  " number of spaces to use for autoindenting
+set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
+set showmatch     " set show matching parenthesis
+set ignorecase    " ignore case when searching
+set smartcase     " ignore case if search pattern is all lowercase,
+                    "    case-sensitive otherwise
+set smarttab      " insert tabs on the start of a line according to
+                    "    shiftwidth, not tabstop
+set hlsearch      " highlight search terms
+set incsearch     " show search matches as you type
+set nowrap        " don't wrap lines
 set hidden
-
-set ttyfast
-
-
-
-" Status bar
-
-set laststatus=2
-
-
-
-" Last line
-
-set showmode
-
-set showcmd
-
-
-
-set listchars=tab:▸\ ,eol:¬
-
-" Uncomment this to enable by default:
-
-" set list " To enable by default
-
-" Or use your leader key + l to toggle on/off
-
-map <leader>l :set list!<CR> " Toggle tabs and EOL
-
-
-
-" Color scheme (terminal)
-
-
-
