@@ -1,0 +1,26 @@
+{
+    //saving
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 100,
+    "editor.autoIndent": true,
+    "editor.wrappingIndent": "same",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": false,
+    "editor.fontFamily": "SFMono-Regular, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 12,
+    "gradle.useCommand": "./gradlew",
+    "workbench.activityBar.visible": true,
+    "extensions.ignoreRecommendations": false,
+    "code-runner.executorMap": {
+        "python": "python3"
+    },
+    "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.6/bin/python3",
+    "python.linting.pylintEnabled": false,
+    "workbench.colorTheme": "Atom One Dark",
+    "git.enableSmartCommit": true,
+    "window.zoomLevel": 0,
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "explorer.confirmDragAndDrop": false,
+    "workbench.iconTheme": "vscode-simpler-icons",
+    "git.confirmSync": false
+}
