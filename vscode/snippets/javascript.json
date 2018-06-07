@@ -1,0 +1,176 @@
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"app.listen:" : {
+		"prefix": "app.listen",
+		"body": [
+			"const PORT = process.env.PORT || 8080;",
+			"app.listen(PORT, () => {", 
+				"console.log(`App listening on port ${PORT}`);",
+				"console.log('Press Ctrl+C to quit.');",
+			"});"
+		],
+		"description": "The listen function used in express"
+	},
+
+	"new Promise:" : {
+		"prefix": "np",
+		"body": [
+			"new Promise(function(resolve, reject) {",
+			"",
+			"})"
+		],
+		"description": "New promise"
+	},
+
+	"console.log:" : {
+		"prefix": "cl",
+		"body": [
+			"console.log(${1:logginbby})"
+		],
+		"description": "Loggin to the console"
+	},
+
+	"console.log with value:" : {
+		"prefix": "clv",
+		"body": [
+			"console.log(`${1:logginbby} ${${2:valbby}}`)"
+		],
+		"description": "Loggin to the console"
+	},
+
+	"console.error:" : {
+		"prefix": "ce",
+		"body": [
+			"console.error(err)"
+		],
+		"description": "Error loggin to the console"
+	},
+
+	"forOF:" : {
+		"prefix": "fo",
+		"body": [
+			"for(${1:vaiable bby} of ${2:array bby}){",
+			"${3:body bby}",
+			"}"
+		],
+		"description": "Loooooop"
+	},
+
+	"require:" : {
+		"prefix": "re",
+		"body": [
+			"const ${1:name bby} = require('${2:path bby}')"
+		],
+		"description": "A simpel require"
+	},
+
+	"post:" : {
+		"prefix": "po",
+		"body": [
+			".post((req, res) => {",
+			"${1:body bby}",
+			"})"
+		],
+		"description": "post request"
+	},
+
+	"get:" : {
+		"prefix": "ge",
+		"body": [
+			".get((req, res) => {",
+			"${1:body bby}",
+			"})"
+		],
+		"description": "get request"
+	},
+
+	"arrow function for callback:" : {
+		"prefix": "arr",
+		"body": [
+			"(${1}) => {",
+			"$2",
+			"}"
+		],
+		"description": "arrowFunction for callback"
+	},
+
+	"function:" : {
+		"prefix": "fu",
+		"body": [
+			"function ${1}($2) {",
+			"${3}",
+			"}"
+		],
+		"description": "function"
+	},
+
+	"const:" : {
+		"prefix": "c",
+		"body": [
+			"const "
+		],
+		"description": "const"
+	},
+
+	"let:" : {
+		"prefix": "l",
+		"body": [
+			"let "
+		],
+		"description": "let"
+	},
+
+	"var:" : {
+		"prefix": "v",
+		"body": [
+			"var "
+		],
+		"description": "var"
+	},
+
+	"then + catch:" : {
+		"prefix": "tc",
+		"body": [
+			".then(($1) => {",
+				"$2",
+			"})",
+			".catch((err) => {",
+				"console.error(err)",
+			"})",
+		],
+		"description": "var"
+	},
+
+	"forEach:" : {
+		"prefix": "fe",
+		"body": [
+			".forEach((${1:ele}) => {",
+			"$2",
+			"})"
+		],
+		"description": "forEach loop"
+	},
+
+	"trim object:" : {
+		"prefix": "tr",
+		"body": [
+			"(({${1:obj1}${2}${3}}) => ({${1:obj1}${2}${3}}))()"
+		],
+		"description": "var"
+	},
+	
+	
+}

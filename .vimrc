@@ -2,11 +2,12 @@ set nocompatible
 
 syntax on
 set number
-set tabstop=2
+set tabstop=5
 set mouse=a
 
-:set laststatus=2
-:set showmode
+set laststatus=2
+set showmode
+set showcmd
 
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
@@ -30,3 +31,6 @@ set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 set nowrap        " don't wrap lines
 set hidden
+
+set nobackup
+set noswapfile

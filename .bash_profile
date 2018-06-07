@@ -11,7 +11,6 @@ export PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-source ~/.bashrc
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
@@ -21,3 +20,12 @@ if [ -f '/Users/antonhagermalm/google-cloud-sdk/path.bash.inc' ]; then source '/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/antonhagermalm/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/antonhagermalm/google-cloud-sdk/completion.bash.inc'; fi
+
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+
+source ~/.bashrc
+source ~/.aliases
+source ~/.bashgit
