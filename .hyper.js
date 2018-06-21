@@ -61,7 +61,7 @@ module.exports = {
     showWindowControls: '',
 
     // custom padding (CSS format, i.e.: `top right bottom left`)
-    padding: '12px 14px',
+    padding: '1px 3px 0px',
 
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
@@ -121,17 +121,18 @@ module.exports = {
 
     // URL to custom bell
     // bellSoundURL: 'http://example.com/bell.mp3',
-    hyperline: {                                                                 
-      plugins: [                                                                 
-        "ip",                                                                    
-        "cpu",                                                                   
-        "spotify"                                                                
-      ]                                                                          
-    },
+    // hyperline: {                                                                 
+    //   plugins: [                                                                 
+    //     "ip",                                                                    
+    //     "cpu",                                                                   
+    //     "spotify"                                                                
+    //   ]                                                                          
+    // },
 
 
     // for advanced config flags please refer to https://hyper.is/#cfg
   },
+
 
   // a list of plugins to fetch and install from npm
   // format: [@org/]project[#version]

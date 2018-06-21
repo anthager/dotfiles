@@ -8,6 +8,8 @@ export ZSH=/Users/antonhagermalm/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="theunraveler"
+# ZSH_THEME="cypher"
+
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -26,7 +28,7 @@ ZSH_THEME="theunraveler"
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
-# Uncomment the following line to change how often to auto-update (in days).
+# Uncomment the following lineto change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
@@ -59,7 +61,6 @@ DISABLE_AUTO_TITLE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
   zsh-syntax-highlighting
   zsh-autosuggestions
 )
@@ -103,15 +104,30 @@ alias ls='ls -a'
 
 # mkdir, cd into it
 mkcd () {
-mkdir -p "$*"
-cd "$*"
+  mkdir -p "$*"
+  cd "$*"
+}
+get(){
+  ls | grep "$*"
 }
 
 #git commands
 
+gc () {
+  git commit -m "$*"
+}
+gco() {
+  git checkout "$*"
+}
+gcn() {
+  git checkout -b "$*"
+}
+gd() {
+  git diff-tree --no-commit-id --name-only -r "$*"
+}
 
-alias cdp='cd ~/projects/'
+alias gpl='git pull'
+alias gl='git log --graph'
 alias gp='git push'
 alias ga='git add .'
 alias gs='git status'
-
