@@ -1,41 +1,124 @@
 {
-    //saving
-    "files.autoSave": "off",
-    "files.autoSaveDelay": 100,
-    "editor.autoIndent": true,
-    "editor.wrappingIndent": "same",
-    "editor.tabSize": 2,
-    "editor.insertSpaces": false,
-    "editor.fontFamily": "SFMono-Regular, Menlo, Inconsolata, FiraCode-Regular",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 12,
-    "workbench.editor.enablePreview": false,
-    "workbench.activityBar.visible": false,
-    "extensions.ignoreRecommendations": false,
-    "code-runner.executorMap": {
-        "python": "python3"
-    },
-    "javascript.validate.enable": false,
-    "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.6/bin/python3",
-    "python.linting.pylintEnabled": true,
-    "workbench.colorTheme": "Atom One Dark",
-    "git.enableSmartCommit": true,
-    "window.zoomLevel": 0,
-    "explorer.confirmDragAndDrop": false,
-    "workbench.iconTheme": "material-icon-theme",
-    "git.confirmSync": false,
-    "[sql]": {
-		
-    },
-    "java.errors.incompleteClasspath.severity": "ignore",
-    "workbench.startupEditor": "newUntitledFile",
-    "materialTheme.fixIconsRunning": false,
-    "editor.minimap.enabled": false,
-    "editor.renderWhitespace": "none",
-    "editor.renderControlCharacters": true,
-    "workbench.statusBar.visible": true,
-    "workbench.colorCustomizations": {
-        "editor.selectionBackground": "#CC39C580",
-        "editor.selectionHighlightBackground": "#CC39C580"
-    }
+  //saving
+  "files.autoSave": "off",
+  "files.autoSaveDelay": 100,
+  "editor.autoIndent": true,
+  "editor.wrappingIndent": "same",
+  "editor.tabSize": 2,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "SFMono-Regular, Menlo, Inconsolata, FiraCode-Regular",
+  "workbench.editor.enablePreview": true,
+  "workbench.activityBar.visible": false,
+  "extensions.ignoreRecommendations": false,
+  "javascript.validate.enable": false,
+  "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.6/bin/python3",
+  "python.linting.pylintEnabled": true,
+  "workbench.colorTheme": "Atom One Dark",
+  "git.enableSmartCommit": true,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "git.confirmSync": false,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "[sql]": {},
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.renderControlCharacters": true,
+  "workbench.statusBar.visible": true,
+  "workbench.colorCustomizations": {
+    "editor.selectionBackground": "#CC39C560",
+    "editor.selectionHighlightBackground": "#CC39C560",
+    "editor.lineHighlightBackground": "#61AFEF1A",
+    "editor.background": "#17212a",
+    "sideBar.border": "#212530",
+    "sideBar.background": "#17212a"
+  },
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.defaultDateStyle": "absolute",
+  "workbench.panel.defaultLocation": "right",
+  "workbench.editor.showTabs": true,
+  "search.exclude": {
+    "**/bower_components": true,
+    "**/dist": true,
+    "**/node_modules": true
+  },
+  "workbench.sideBar.location": "left",
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    { "language": "typescript", "autoFix": true },
+    { "language": "typescriptreact", "autoFix": true }
+  ],
+  "[javascript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.disableLanguages": ["js"],
+  "editor.insertSpaces": false,
+  "python.jediEnabled": false,
+  "editor.fontSize": 18.3,
+  "editor.lineHeight": 0.4,
+  "files.associations": {
+    "*.tsx": "typescriptreact"
+  },
+  "prettier.eslintIntegration": true,
+  "cSpell.userWords": [
+    "Howeverly",
+    "Injectable",
+    "Medialaan",
+    "Normalised",
+    "Timemode",
+    "aptus",
+    "dataset",
+    "datasets",
+    "definintition",
+    "depersgroep",
+    "hacky",
+    "pageviews",
+    "persgroep",
+    "prisma",
+    "strftime",
+    "tooltips",
+    "wonderwall",
+    "xtra"
+  ],
+  "window.zoomLevel": -2,
+  "files.exclude": {
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/.settings": true
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "python.venvPath": "./prediction/venv",
+  "breadcrumbs.enabled": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "liveshare.featureSet": "insiders",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "ruby.rubocop.executePath": "/Users/antonhagermalm/.rvm/gems/ruby-2.3.3/bin/",
+  "ruby.rubocop.useBundler": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "tslint.alwaysShowStatus": true,
+  "explorer.openEditors.visible": 0,
+  "java.dependency.showOutline": false,
+  "editor.formatOnSave": true
 }

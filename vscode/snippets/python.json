@@ -1,0 +1,29 @@
+{
+  "loading in loop": {
+    "prefix": "load",
+    "body": [
+      "if (i % (it / 10) == 0):",
+      "print(str(math.floor(i / it * 100)) + '%')"
+    ],
+    "description": "loading in loop"
+  },
+  "rename files": {
+    "prefix": "rename",
+    "body": [
+      "import os",
+      "",
+      "_dir = 'utils/seed/src/courses/TMS064'",
+      "files = os.listdir(_dir)",
+      "for i in files:",
+      "  splitted = i.split('.')",
+      "  print(i)",
+      "  if (splitted[len(splitted) - 1] == 'PNG'):",
+      "    splitted[len(splitted)-1] = 'png'",
+      "    newName = '.'.join(splitted)",
+      "    old_file = os.path.join(_dir, i)",
+      "    new_file = os.path.join(_dir, newName)",
+      "    os.rename(old_file, new_file)"
+    ],
+    "description": "loading in loop"
+  }
+}

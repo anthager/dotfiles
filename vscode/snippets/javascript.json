@@ -38,7 +38,7 @@
 	"console.log:" : {
 		"prefix": "cl",
 		"body": [
-			"console.log(${1:logginbby})"
+			"console.log(${1:nice})"
 		],
 		"description": "Loggin to the console"
 	},
@@ -170,6 +170,20 @@
 			"(({${1:obj1}${2}${3}}) => ({${1:obj1}${2}${3}}))()"
 		],
 		"description": "var"
+	},
+	
+	"timeout promise:" : {
+		"prefix": "timeprom",
+		"body": [
+			"new Promise(res => {",
+			"  setTimeout(() => {",
+			"    console.log('mock unlock call')",
+			"    res({ success: true })",
+			"    return",
+			"  }, ${1)",
+			"})",
+		],
+		"description": "creates a timeout that returns a promise"
 	},
 	
 	
