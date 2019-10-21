@@ -1,0 +1,19 @@
+{
+	"Print to console": {
+		"prefix": "cl",
+		"body": [
+			"fmt.Println(${1:\"nice\"})"
+		],
+		"description": "Log output to console"
+	},
+	"sort": {
+		"prefix": "sorts",
+		"body": [
+			"type ByValue []rune",
+			"func (r ByValue) Len() int            { return len(r) }",
+			"func (r ByValue) Swap(i, j rune)      { r[i], r[j] = r[j], r[i] }",
+			"func (r ByValue) Less(i, j rune) bool { return r[i] < r[j] }"
+		],
+		"description": "sort"
+	}
+}

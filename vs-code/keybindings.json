@@ -477,5 +477,13 @@
   {
     "key": "alt+cmd+g d",
     "command": "git.clean"
+  },
+  {
+    "key": "alt+cmd+n",
+    "command": "workbench.action.newWindow"
+  },
+  {
+    "key": "alt+cmd+l",
+    "command": "workbench.action.openSnippets"
   }
 ]

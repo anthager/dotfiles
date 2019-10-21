@@ -1,7 +1,5 @@
 {
-  //saving
-  "files.autoSave": "off",
-  "files.autoSaveDelay": 100,
+  "files.autoSaveDelay": 500,
   "editor.autoIndent": true,
   "editor.wrappingIndent": "same",
   "editor.tabSize": 2,
@@ -49,7 +47,6 @@
     "**/node_modules": true
   },
   "workbench.sideBar.location": "left",
-  "eslint.autoFixOnSave": true,
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -60,7 +57,11 @@
     "editor.formatOnSave": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "prettier.disableLanguages": ["js"],
+  "[typescript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.disableLanguages": ["js", "ts"],
   "editor.insertSpaces": false,
   "python.jediEnabled": false,
   "editor.fontSize": 18.3,
@@ -68,23 +69,32 @@
   "files.associations": {
     "*.tsx": "typescriptreact"
   },
-  "prettier.eslintIntegration": true,
   "cSpell.userWords": [
+    "Anthage",
+    "Anthager",
+    "BRASSE",
+    "Envs",
     "Howeverly",
     "Injectable",
     "Medialaan",
     "Normalised",
     "Timemode",
+    "alohomora",
+    "antonhagermalm",
     "aptus",
+    "browserslist",
     "dataset",
     "datasets",
     "definintition",
     "depersgroep",
     "hacky",
+    "lasse",
     "pageviews",
     "persgroep",
     "prisma",
+    "progressbar",
     "strftime",
+    "tailwindcss",
     "tooltips",
     "wonderwall",
     "xtra"
@@ -99,9 +109,6 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "python.venvPath": "./prediction/venv",
   "breadcrumbs.enabled": false,
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -117,8 +124,19 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "tslint.alwaysShowStatus": true,
   "explorer.openEditors.visible": 0,
   "java.dependency.showOutline": false,
-  "editor.formatOnSave": true
+  "tslint.packageManager": "yarn",
+  "tslint.alwaysShowStatus": true,
+  "eslint.autoFixOnSave": true,
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "eslint.packageManager": "yarn",
+  "eslint.alwaysShowStatus": true,
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "editor.formatOnSave": true,
+  "java.configuration.checkProjectSettingsExclusions": false
 }
