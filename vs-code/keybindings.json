@@ -21,10 +21,6 @@
     "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+r",
-    "command": "code-runner.run"
-  },
-  {
     "key": "ctrl+alt+n",
     "command": "-code-runner.run"
   },
@@ -485,5 +481,13 @@
   {
     "key": "alt+cmd+l",
     "command": "workbench.action.openSnippets"
+  },
+  {
+    "key": "cmd+o",
+    "command": "-workbench.action.files.openFileFolder"
+  },
+  {
+    "key": "alt+cmd+g cmd+d",
+    "command": "git.revertSelectedRanges"
   }
 ]
