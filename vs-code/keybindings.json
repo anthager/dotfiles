@@ -489,5 +489,9 @@
   {
     "key": "alt+cmd+g cmd+d",
     "command": "git.revertSelectedRanges"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "workbench.view.extension.dockerView"
   }
 ]
