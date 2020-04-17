@@ -357,11 +357,6 @@
     "command": "-workbench.action.toggleTabsVisibility"
   },
   {
-    "key": "cmd+l",
-    "command": "console.log.wrap.down.prefix",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "ctrl+alt+w ctrl+alt+down",
     "command": "-console.log.wrap.down.prefix",
     "when": "editorTextFocus"
@@ -493,5 +488,36 @@
   {
     "key": "ctrl+d",
     "command": "workbench.view.extension.dockerView"
-  }
+  },
+  {
+    "key": "alt+cmd+v",
+    "command": "toggleFindCaseSensitive"
+  },
+  {
+    "key": "ctrl+cmd+enter",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "enter",
+    "command": "-renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "ctrl+s",
+    "command": "workbench.view.remote"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "snippet": "console.log(`${TM_SELECTED_TEXT}$1`)$2;"
+    }
+},
+{
+  "key": "cmd+l",
+  "command": "console.log.wrap.down.prefix"
+}
+
 ]

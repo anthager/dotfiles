@@ -46,14 +46,15 @@
   "search.exclude": {
     "**/bower_components": true,
     "**/dist": true,
-    "**/node_modules": true
+    "**/node_modules": true,
+    "**/build": true
   },
   "workbench.sideBar.location": "left",
   "eslint.validate": [
     "javascript",
     "javascriptreact",
-    { "language": "typescript", "autoFix": true },
-    { "language": "typescriptreact", "autoFix": true }
+    "typescript",
+    "typescriptreact",
   ],
   "[javascript]": {
     "editor.formatOnSave": false,
@@ -67,17 +68,18 @@
     "js",
     "ts"
   ],
-  "eslint.autoFixOnSave": true,
   "python.jediEnabled": false,
   "editor.fontSize": 18.3,
   "editor.lineHeight": 0.4,
   "files.associations": {
-    "*.tsx": "typescriptreact"
+    "*.tsx": "typescriptreact",
   },
   "cSpell.userWords": [
     "Anthage",
     "Anthager",
+    "Authorised",
     "BRASSE",
+    "Dataloader",
     "Envs",
     "Howeverly",
     "Injectable",
@@ -89,7 +91,9 @@
     "alohomora",
     "antonhagermalm",
     "aptus",
+    "borik",
     "browserslist",
+    "caveate",
     "dataset",
     "datasets",
     "datasource",
@@ -103,15 +107,18 @@
     "pageviews",
     "participations",
     "persgroep",
+    "postgres",
     "prisma",
     "prismafy",
     "progressbar",
     "refetch",
+    "showfactor",
     "strftime",
     "tailwindcss",
     "tillie",
     "tooltips",
     "traefik",
+    "upsert",
     "wonderwall",
     "xtra"
   ],
@@ -134,6 +141,9 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[plaintext]": {
+    "editor.wordWrap": "on",
+  },
   "explorer.openEditors.visible": 0,
   "java.dependency.showOutline": false,
   "tslint.packageManager": "yarn",
@@ -148,5 +158,11 @@
   },
   "editor.formatOnSave": true,
   "java.configuration.checkProjectSettingsExclusions": false,
-  "breadcrumbs.enabled": false
+  "breadcrumbs.enabled": false,
+  "editor.largeFileOptimizations": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "explorer.compactFolders": false,
+  "workbench.editor.limit.enabled": true,
 }

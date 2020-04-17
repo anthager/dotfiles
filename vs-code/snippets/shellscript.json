@@ -1,17 +1,28 @@
 {
-  // Place your snippets for shellscript here. Each snippet is defined under a snippet name and has a prefix, body and
-  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
-  // same ids are connected.
-  // Example:
-  "new script": {
-    "prefix": "sh",
-    "body": [
-      "#!/usr/bin/env bash",
-      "set -e",
-      "cd \"$( cd \"$( dirname \"${BASH_SOURCE[0]}\" )\" > /dev/null && pwd )\"",
-      "$1"
-    ],
-    "description": "Make a new shell script"
-  }
+	"new script": {
+		"prefix": "sh",
+		"body": [
+			"#!/usr/bin/env bash",
+			"set -e",
+			"cd \"$( cd \"$( dirname \"${BASH_SOURCE[0]}\" )\" > /dev/null && pwd )\"",
+			"$1"
+		],
+		"description": "Make a new shell script"
+	},
+	"cli with flags": {
+		"prefix": "cli",
+		"body": [
+			"while getopts \"e:r:\" optchar; do",
+			"  case \"$optchar\" in",
+			"  e)",
+			"    NEW_ENV=$OPTARG",
+			"    ;;",
+			"  r)",
+			"    NEW_REGION=$OPTARG",
+			"    ;;",
+			"  esac",
+			"done"
+		],
+		"description": "cli flags"
+	}
 }
