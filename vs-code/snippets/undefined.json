@@ -1,0 +1,17 @@
+{
+	"undefined": {
+		"body": [
+			"for opt in \"$@\"; do",
+			"  case \"$opt\" in",
+			"  --exec | -e)",
+			"    EXEC=\"true\"",
+			"    break",
+			"    ;;",
+			"  *)",
+			"    break",
+			"    ;;",
+			"  esac",
+			"done"
+		]
+	}
+}

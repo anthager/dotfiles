@@ -13,16 +13,16 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 # source /usr/local/etc/profile.d/z.sh
 
-SAVEHIST=30000
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+export SAVEHIST=30000
+export HISTSIZE=100000
 
 # git
-alias gl='git lg'
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset - %C(yellow)%cn:%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=local"
 alias gs='git status'
-alias gres='git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)'
+# git reset to origin
+alias gro='git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)'
+# git latest merge
+alias glm="glog | egrep "Merge" | head -1 | awk '{print \$2}'"
 
 gd() {
     git diff-tree --no-commit-id --name-only -r "$*"
@@ -36,13 +36,12 @@ gcpr() {
     open "https://github.com/$repo/pull/new/$(git rev-parse --abbrev-ref HEAD)"
 }
 git-go-to-commit() {
-	if ! git remote show origin -n &> /dev/null
-	then
-		echo Not a repo m8
-		return 1
-	fi
+    if ! git remote show origin -n &>/dev/null; then
+        echo Not a repo m8
+        return 1
+    fi
     repo=$(git remote show origin -n | grep "Fetch URL:" | cut -d : -f 3 | cut -d . -f 1)
-	open "https://github.com/$repo/commit/$1"
+    open "https://github.com/$repo/commit/$1"
 }
 
 # burt
@@ -54,6 +53,7 @@ mkcd() {
     mkdir -p "$*"
     cd "$*"
 }
+
 alias c='code .'
 alias hs='history | egrep'
 alias f='open .'
@@ -73,9 +73,13 @@ export PYTHONPATH='/usr/local/bin/python3'
 export PATH=~/Library/Python/3.7/bin:$PATH
 export GOPATH="/Users/antonhagermalm/go"
 export PATH=$PATH:$(go env GOPATH)/bin
-source /Users/antonhagermalm/.ghcup/env
-
-# # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+eval "$(rbenv init -)"
+
+AWS_REGION=us-east-1

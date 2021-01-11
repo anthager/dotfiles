@@ -1,10 +1,10 @@
 {
   "files.autoSaveDelay": 500,
-  "editor.autoIndent": true,
+  "editor.autoIndent": "full",
   "editor.wrappingIndent": "same",
   "editor.tabSize": 2,
   "editor.fontLigatures": true,
-  "editor.fontFamily": "SFMono-Regular, Menlo, Inconsolata, FiraCode-Regular",
+  "editor.fontFamily": "SFMono-Light, Inconsolata, Menlo",
   "workbench.editor.enablePreview": true,
   "workbench.activityBar.visible": false,
   "extensions.ignoreRecommendations": false,
@@ -33,11 +33,10 @@
     "editor.lineHighlightBackground": "#61AFEF1A",
     "editor.background": "#15202B",
     "sideBar.background": "#15202B",
-    // "editor.background": "#17212a",
-    // "sideBar.background": "#17212a",
-    "sideBar.border": "#212530",
+    "sideBar.border": "#212530"
   },
   "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": true,
     "suppressShowKeyBindingsNotice": true
   },
   "gitlens.defaultDateStyle": "absolute",
@@ -54,7 +53,7 @@
     "javascript",
     "javascriptreact",
     "typescript",
-    "typescriptreact",
+    "typescriptreact"
   ],
   "[javascript]": {
     "editor.formatOnSave": false,
@@ -64,33 +63,36 @@
     "editor.formatOnSave": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "prettier.disableLanguages": [
-    "js",
-    "ts"
-  ],
+  "prettier.disableLanguages": ["js", "ts"],
   "python.jediEnabled": false,
-  "editor.fontSize": 18.3,
-  "editor.lineHeight": 0.4,
+  "editor.fontSize": 19,
   "files.associations": {
-    "*.tsx": "typescriptreact",
+    "*.tsx": "typescriptreact"
   },
   "cSpell.userWords": [
     "Anthage",
     "Anthager",
     "Authorised",
     "BRASSE",
+    "COVID",
     "Dataloader",
     "Envs",
     "Howeverly",
     "Injectable",
+    "Ivar",
     "Lookaside",
     "Medialaan",
     "Normalised",
+    "Tensorflow",
     "Timemode",
     "Yata",
     "alohomora",
+    "anonymization",
+    "anonymizes",
+    "anonymizing",
     "antonhagermalm",
     "aptus",
+    "arbririy",
     "borik",
     "browserslist",
     "caveate",
@@ -107,11 +109,13 @@
     "pageviews",
     "participations",
     "persgroep",
+    "pluggable",
     "postgres",
     "prisma",
     "prismafy",
     "progressbar",
     "refetch",
+    "serie",
     "showfactor",
     "strftime",
     "tailwindcss",
@@ -126,23 +130,18 @@
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "python.venvPath": "./prediction/venv",
+  "liveshare.featureSet": "insiders",
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "liveshare.featureSet": "insiders",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
-  "ruby.rubocop.executePath": "/Users/antonhagermalm/.rvm/gems/ruby-2.3.3/bin/",
-  "ruby.rubocop.useBundler": true,
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[plaintext]": {
-    "editor.wordWrap": "on",
+    "editor.wordWrap": "on"
   },
   "explorer.openEditors.visible": 0,
   "java.dependency.showOutline": false,
@@ -156,13 +155,49 @@
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
-  "editor.formatOnSave": true,
   "java.configuration.checkProjectSettingsExclusions": false,
-  "breadcrumbs.enabled": false,
+  "breadcrumbs.enabled": true,
   "editor.largeFileOptimizations": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
   "explorer.compactFolders": false,
   "workbench.editor.limit.enabled": true,
+  "editor.find.addExtraSpaceOnTop": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "yaml.format.singleQuote": true,
+  "editor.renameOnType": true,
+  "python.languageServer": "Pylance",
+  "githubIssues.queries": [
+    {
+      "label": "My Issues",
+      "query": "default"
+    },
+    {
+      "label": "Created Issues",
+      "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+    }
+  ],
+  "githubPullRequests.queries": [
+    {
+      "label": "Waiting For My Review",
+      "query": "is:open review-requested:${user}"
+    },
+    {
+      "label": "Assigned To Me",
+      "query": "is:open assignee:${user}"
+    },
+    {
+      "label": "Created By Me",
+      "query": "is:open author:${user}"
+    }
+  ],
+  "search.followSymlinks": false,
+  "ruby.rubocop.executePath": "/Users/antonhagermalm/.rbenv/versions/2.5.5/bin/",
+  "gitlens.mode.active": "review",
+  "gitlens.views.remotes.branches.layout": "list",
+  "search.useIgnoreFiles": false,
+  "cSpell.showStatus": false,
+  "cSpell.showCommandsInEditorContextMenu": false,
+  "headwind.runOnSave": false
 }

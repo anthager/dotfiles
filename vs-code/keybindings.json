@@ -474,10 +474,6 @@
     "command": "workbench.action.newWindow"
   },
   {
-    "key": "alt+cmd+l",
-    "command": "workbench.action.openSnippets"
-  },
-  {
     "key": "cmd+o",
     "command": "-workbench.action.files.openFileFolder"
   },
@@ -494,9 +490,8 @@
     "command": "toggleFindCaseSensitive"
   },
   {
-    "key": "ctrl+cmd+enter",
-    "command": "renameFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    "key": "shift+alt+r",
+    "command": "renameFile"
   },
   {
     "key": "enter",
@@ -514,10 +509,23 @@
     "args": {
       "snippet": "console.log(`${TM_SELECTED_TEXT}$1`)$2;"
     }
-},
-{
-  "key": "cmd+l",
-  "command": "console.log.wrap.down.prefix"
-}
-
+  },
+  {
+    "key": "cmd+l",
+    "command": "console.log.wrap.down.prefix"
+  },
+  {
+    "key": "ctrl+alt+cmd+t",
+    "command": "extension.goToSpec",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+t",
+    "command": "-extension.goToSpec",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "gitlens.showFileHistoryInView"
+  }
 ]
