@@ -63,7 +63,7 @@
     "command": "workbench.action.closePanel"
   },
   {
-    "key": "shift+cmd+j n",
+    "key": "alt+r",
     "command": "cmstead.jsRefactor.rename"
   },
   {
@@ -327,10 +327,6 @@
     "command": "gitlens.copyRemoteFileUrlToClipboard"
   },
   {
-    "key": "alt+cmd+g s",
-    "command": "git.stage"
-  },
-  {
     "key": "shift+cmd+s",
     "command": "workbench.action.files.saveWithoutFormatting"
   },
@@ -341,10 +337,6 @@
   {
     "key": "shift+cmd+s",
     "command": "-workbench.action.files.saveAs"
-  },
-  {
-    "key": "alt+cmd+g d",
-    "command": "git.clean"
   },
   {
     "key": "alt+cmd+n",
@@ -386,5 +378,14 @@
   {
     "key": "ctrl+v",
     "command": "gitlens.showFileHistoryInView"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "prStatus:github.focus"
+  },
+  {
+    "key": "cmd+k",
+    "command": "-to-es6-template-literal.format",
+    "when": "editorTextFocus"
   }
 ]
