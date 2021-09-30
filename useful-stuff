@@ -1,9 +1,7 @@
-# removes all npm modules
-cd &&  npm ls -gp --depth=0 | awk -F/ '/node_modules/ && !/\/npm$/ {print $NF}' | xargs npm -g rm
-
 # removes exposé
 echo "defaults write com.apple.dock expose-animation-duration -float 0.1 && Killall Dock && Killall Finder"
 
 # editing dock speed
 defaults delete com.apple.dock autohide-time-modifier && Killall Dock
 defaults write com.apple.dock autohide-time-modifier -int 0 && Killall Dock
+

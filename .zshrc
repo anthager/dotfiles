@@ -1,4 +1,4 @@
-export ZSH="/Users/antonhagermalm/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 plugins=(
     # zsh-syntax-highlighting
@@ -22,6 +22,7 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 
 # git
+alias git='LC_ALL=en git'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset - %C(yellow)%cn:%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=local"
 alias gs='git status'
 # git reset to origin
@@ -55,18 +56,45 @@ mkcd() {
     cd "$*"
 }
 
-papper() {
-    read str
-    node -e "console.log(process.argv[1].replace(/\s/g, '-').toLowerCase())" $str
-}
-
 alias c='code .'
 alias py='python'
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/antonhagermalm/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/antonhagermalm/google-cloud-sdk/path.zsh.inc'; fi
+eval export PATH="/Users/ahagermalm/.jenv/shims:${PATH}"
+export JENV_SHELL=zsh
+export JENV_LOADED=1
+unset JAVA_HOME
+source '/usr/local/Cellar/jenv/0.5.4/libexec/libexec/../completions/jenv.zsh'
+jenv rehash 2>/dev/null
+jenv refresh-plugins
+jenv() {
+  typeset command
+  command="$1"
+  if [ "$#" -gt 0 ]; then
+    shift
+  fi
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/antonhagermalm/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/antonhagermalm/google-cloud-sdk/completion.zsh.inc'; fi
+  case "$command" in
+  enable-plugin|rehash|shell|shell-options)
+    eval `jenv "sh-$command" "$@"`;;
+  *)
+    command jenv "$command" "$@";;
+  esac
+}
 
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Created by `pipx` on 2021-09-28 22:07:22
+export PATH="$PATH:/Users/ahagermalm/.local/bin"
+
+# gcloud
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
+function cerebro {
+	readonly CLUSTER=${1:-15staging};
+	HOST="http://searches$CLUSTER-kibana.services.gew1.spotify.net:9200";
+     open "http://localhost:9000/#!/overview?host=$HOST"
+};
+
+
+
